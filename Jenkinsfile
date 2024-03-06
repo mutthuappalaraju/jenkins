@@ -6,24 +6,17 @@ pipeline {
         
         }
     }
-    
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
-        failure { 
-            echo 'when indicate job failure'
-        }
-        success { 
-            echo 'when job success'
-        }
-    }
-
     options {
         // Timeout counter starts AFTER agent is allocated
         timeout(time: 1, unit: 'SECONDS')
     }
 
+    environment { 
+       GREETINGS = 'hello jenkins'
+    }
+
+    
+    
     stages {
         stage('Build') {
             steps {
@@ -41,4 +34,17 @@ pipeline {
             }
         }
     }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        failure { 
+            echo 'when indicate job failure'
+        }
+        success { 
+            echo 'when job success'
+        }
+    }
 }
+
+
