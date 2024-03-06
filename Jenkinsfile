@@ -1,10 +1,12 @@
 pipeline {
+    
     agent {
         node {
             label 'AGENT-1'
         
         }
     }
+    
     post { 
         always { 
             echo 'I will always say Hello again!'
@@ -17,6 +19,10 @@ pipeline {
         }
     }
 
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
+    }
 
     stages {
         stage('Build') {
