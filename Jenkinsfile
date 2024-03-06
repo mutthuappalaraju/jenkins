@@ -30,7 +30,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying..'
+                sh """
+                   echo 'heloo shell script'
+                   echo '$GREETINGS'
+                """
             }
         }
     }
