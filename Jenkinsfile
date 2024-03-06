@@ -8,7 +8,7 @@ pipeline {
     }
     
     environment { 
-       GREETING = 'hello jenkins user'
+       GREETING = 'hello jenkins user add web hook'
     }
 
     options {
