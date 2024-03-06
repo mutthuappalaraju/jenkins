@@ -33,6 +33,7 @@ pipeline {
                 sh """
                    echo 'heloo shell script'
                    env
+                   echo '$GREETING'
                 """   
                 
             }
