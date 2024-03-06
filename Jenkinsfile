@@ -8,7 +8,7 @@ pipeline {
     }
     
     environment { 
-       GREETING = 'hello jenkins'
+       GREETING = 'hello jenkins user'
     }
 
     options {
