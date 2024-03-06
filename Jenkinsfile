@@ -12,7 +12,7 @@ pipeline {
     }
 
     environment { 
-       GREETINGS = 'hello jenkins'
+       GREETING = 'hello jenkins'
     }
 
     
