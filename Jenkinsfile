@@ -32,8 +32,8 @@ pipeline {
             steps {
                 sh """
                    echo 'heloo shell script'
-                   echo '$GREETINGS'
-                """
+                """   
+                
             }
         }
     }
