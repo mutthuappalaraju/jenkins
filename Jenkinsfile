@@ -11,10 +11,10 @@ pipeline {
        GREETING = 'hello jenkins user add web hook'
     }
 
-    options {
-        // Timeout counter starts AFTER agent is allocated
-        timeout(time: 1, unit: 'HOURS')
-    }
+    // options {
+    //     // Timeout counter starts AFTER agent is allocated
+    //     timeout(time: 1, unit: 'HOURS')
+    // }
 
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
